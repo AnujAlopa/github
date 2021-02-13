@@ -85,7 +85,7 @@ const FormDetails = () => {
                 <Grid item lg={6} md={6} sm={12} xs={12}>
                     <Card className={classes.cardStyle}>
                         <div className={classes.divStyle}>
-                        <Typography>Mob. 9335471256, 8176976885</Typography>
+                        <Typography>Mob. 9335471256, 8176976885, 8960338825</Typography>
                         <Typography>sales@electricaltrendz.com</Typography>
                         </div>
                     </Card>

@@ -67,14 +67,14 @@ function Navbar(props) {
                     <Hidden smDown>
                         <Typography variant="h6" color="inherit" className={classes.logoBg}>
                             <NavLink to={homeLink} className={classes.navLink} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>
-                            <img src={AdminImage} alt="logo"  width="175px" height="50px"/>
+                            <img src={AdminImage} alt="logo"  width="150px" height="50px"/>
                             </NavLink>
                         </Typography>
                     </Hidden>
                     <Hidden mdUp>
                         <Typography variant="h6" color="inherit" className={classes.logoForMobile}>
                             <NavLink to={"#"} className={classes.navLink} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>
-                            <img src={AdminImage} alt="logo" width="175px" height="50px"/>
+                            <img src={AdminImage} alt="logo" width="150px" height="50px"/>
                             </NavLink>
                         </Typography>
                     </Hidden>
