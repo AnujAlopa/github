@@ -14,7 +14,7 @@ const styles = theme => ({
     logoBg: { backgroundColor: "#fff",padding: "0px"},
     logoForMobile: { left: "30%", width:"100px", position: "absolute" },
     navLinkMobile: { textDecoration: "none", display: "inline-flex", color: "#515974" },
-    avatar:{ width: 40, height: 40, marginLeft:"40px" },
+    avatar:{ width: 60, height: 60, marginLeft:"10px" },
     dispBlk:{
         [theme.breakpoints.down('sm')]:{
             display:"block",
@@ -67,14 +67,14 @@ function Navbar(props) {
                     <Hidden smDown>
                         <Typography variant="h6" color="inherit" className={classes.logoBg}>
                             <NavLink to={homeLink} className={classes.navLink} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>
-                            <img src={AdminImage} alt="logo"  width="150px" height="50px"/>
+                            <img src={AdminImage} alt="logo"  width="140px" height="50px"/>
                             </NavLink>
                         </Typography>
                     </Hidden>
                     <Hidden mdUp>
                         <Typography variant="h6" color="inherit" className={classes.logoForMobile}>
                             <NavLink to={"#"} className={classes.navLink} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>
-                            <img src={AdminImage} alt="logo" width="150px" height="50px"/>
+                            <img src={AdminImage} alt="logo" width="140px" height="50px"/>
                             </NavLink>
                         </Typography>
                     </Hidden>

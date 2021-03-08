@@ -6,6 +6,7 @@ import Home from './Home';
 import AboutUs from '../AboutUs/AboutUs';
 import ContactUs from '../ContactUs/ContactUs';
 import OurServices from '../OurServices/OurServices';
+import Certificate from '../Certificate/Certificate';
 import Footer from '../../components/Footer';
 
 const styles = theme => ({
@@ -28,14 +29,16 @@ class MasterPage extends React.Component {
                 <NavLink to={`${match.url}/home`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Home</NavLink>,
                 <NavLink to={`${match.url}/aboutus`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>About Us</NavLink>,
                 <NavLink to={`${match.url}/contactus`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Contact Us</NavLink>,
-                <NavLink to={`${match.url}/ourservices`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Our Services</NavLink>
+                <NavLink to={`${match.url}/ourservices`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Our Services</NavLink>,
+                <NavLink to={`${match.url}/certificate`} className={classes.navLinkMobile + " " + classes.dispBlk} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Certificate</NavLink>
             ];
         } else {
             var Nav = [
                 <NavLink to={`${match.url}/home`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Home</NavLink>,
                 <NavLink to={`${match.url}/aboutus`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>About Us</NavLink>,
                 <NavLink to={`${match.url}/contactus`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Contact Us</NavLink>,
-                <NavLink to={`${match.url}/ourservices`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Our Services</NavLink>
+                <NavLink to={`${match.url}/ourservices`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Our Services</NavLink>,
+                <NavLink to={`${match.url}/certificate`} className={classes.navLink} style={{ textDecorationLine: "none" }} activeClassName="active" activeStyle={{ fontWeight: "bold", color: "red" }}>Certificate</NavLink>
             ];
         }
         return (
@@ -47,6 +50,7 @@ class MasterPage extends React.Component {
                     <Route path={`${match.url}/aboutus`} render={() => <AboutUs />} />
                     <Route path={`${match.url}/contactus`} render={() => <ContactUs />} />
                     <Route path={`${match.url}/ourservices`} render={() => <OurServices />} />
+                    <Route path={`${match.url}/certificate`} render={() => <Certificate />} />
                     <Redirect to={`${match.url}/Home`} ></Redirect>
                 </Switch>
                 <Footer />

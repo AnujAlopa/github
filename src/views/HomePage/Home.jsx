@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Typography, Card } from '@material-ui/core';
-import solor from '../../assets/images/solar.jpeg';
+import solor from '../../assets/images/homepic.png';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -24,9 +24,9 @@ const Home = () => {
 
     return (
         <div className={classes.main}>
-            <Typography className={classes.headingStyle}>Welcome to Electricaltrendz</Typography>
+            {/* <Typography className={classes.headingStyle}>Welcome to Electricaltrendz</Typography>
             <Typography className={classes.descriptionStyle}> This is the place where you will get all kind of solar solution.</Typography>
-            <Typography className={classes.descriptionStyle}>Complete SOLAR solution under single roof.</Typography>
+            <Typography className={classes.descriptionStyle}>Complete SOLAR solution under single roof.</Typography> */}
         </div>
     )
 }
