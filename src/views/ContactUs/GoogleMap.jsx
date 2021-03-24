@@ -1,35 +1,45 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
- 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
- 
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33
-    },
-    zoom: 11
-  };
- 
+import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+
+const mapStyles = {
+  width: '100%',
+  height: '100%'
+};
+
+export class MapContainer extends Component {
+  // ...
+
   render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '50vh', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key:'AIzaSyBXeRRTGfl73BXXgx3oSYoiOuT0JBV_hjk' }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+      <Map
+        google={this.props.google}
+        zoom={14}
+        style={mapStyles}
+        initialCenter={
+          {
+            lat: -1.2884,
+            lng: 36.8233
+          }
+        }
+      >
+        <Marker
+          onClick={this.onMarkerClick}
+          name={'Kenyatta International Convention Centre'}
+        />
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          />
-        </GoogleMapReact>
-      </div>
+          <div>
+            <h4>{this.state.selectedPlace.name}</h4>
+          </div>
+        </InfoWindow>
+      </Map>
     );
   }
 }
- 
-export default SimpleMap;
+
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyBXeRRTGfl73BXXgx3oSYoiOuT0JBV_hjk'
+})(MapContainer);
