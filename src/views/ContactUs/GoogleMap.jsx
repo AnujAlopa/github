@@ -43,7 +43,7 @@ export class MapContainer extends Component {
       >
         <Marker
           onClick={this.onMarkerClick}
-          name={''}
+          name={'Gomati Nagar Lko'}
         />
         <InfoWindow
           marker={this.state.activeMarker}
